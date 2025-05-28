@@ -20,13 +20,18 @@ long long LibraryMenu()
     cout << "If information is already known and you wish to add a book to the library please press 3 to go to the next menu and prompt.\n" << endl;
 
     cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;
-    cin >> selection;
     
     while(!inputrecieved)
     {
         try
         {
-            /* code */
+            std::cin >> selection;
+
+            
+            if(std::cin.fail())
+                throw std::invalid_argument("");//Like in the factorial calculator previously created it throws an exception
+
+                inputrecieved = true;
         }
         catch(const std::exception& e)
         {
