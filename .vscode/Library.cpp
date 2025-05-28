@@ -23,3 +23,24 @@ long long LibraryMenu()
 
     return 0;
 }
+
+
+void AddBook()
+{
+
+}
+
+void RemoveBook()
+{
+
+}
+
+void BorrowBook()
+{
+
+}
+
+void DisplayBook()
+{
+
+}
