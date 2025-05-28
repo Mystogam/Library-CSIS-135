@@ -7,6 +7,7 @@ using namespace std;
 
 
 long long LibraryMenu();
+#define LibraryMenu
 
 struct Book
 {
@@ -18,9 +19,13 @@ struct Book
 };
 
 void DisplayBook();
+#define DisplayBook
 
 void BorrowBook();
+#define BorrowBook
 
 void RemoveBook();
+#define RemoveBook
 
 void AddBook();
+#define AddBook
