@@ -20,11 +20,8 @@ long long LibraryMenu();
 
 void DisplayBook();
 
+void BorrowBook(std::string title);
 
-void BorrowBook();
+void RemoveBook(std::string title);
 
-
-void RemoveBook();
-
-
-void AddBook();
+void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable);
