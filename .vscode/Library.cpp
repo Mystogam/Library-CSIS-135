@@ -40,10 +40,12 @@ long long LibraryMenu()
             }
             else if(selection = 2)
             {
+
                 BorrowBook();
             }
             else if(selection = 3)
             {
+      
                 AddBook();
             }
             else if (selection = 4)

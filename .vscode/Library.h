@@ -6,6 +6,22 @@
 
 using namespace std;
 
+class Library
+{
+private:
+    /* data */
+public:
+    Library(/* args */);
+    ~Library();
+};
+
+Library::Library(/* args */)
+{
+}
+
+Library::~Library()
+{
+}
 
 struct Book
 {
