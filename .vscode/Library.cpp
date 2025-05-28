@@ -34,6 +34,22 @@ long long LibraryMenu()
                 throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
 
             }
+            if(selection = 1)
+            {
+                DisplayBook();
+            }
+            else if(selection = 2)
+            {
+                BorrowBook();
+            }
+            else if(selection = 3)
+            {
+                AddBook();
+            }
+            else if (selection = 4)
+            {
+                RemoveBook();
+            }
         }
         catch(const exception& e)
         {
