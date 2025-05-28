@@ -3,11 +3,9 @@
 
 #include <iostream>
 #include <string>
+#pragma once
 using namespace std;
 
-
-long long LibraryMenu();
-#define LibraryMenu
 
 struct Book
 {
@@ -17,6 +15,9 @@ struct Book
     int copiesAvailable;
     int copiesCheckedOut;
 };
+
+long long LibraryMenu();
+#define LibraryMenu
 
 void DisplayBook();
 #define DisplayBook
