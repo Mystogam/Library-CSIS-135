@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#pragma once
+
 using namespace std;
 
 
@@ -17,16 +17,14 @@ struct Book
 };
 
 long long LibraryMenu();
-#define LibraryMenu
 
 void DisplayBook();
-#define DisplayBook
+
 
 void BorrowBook();
-#define BorrowBook
+
 
 void RemoveBook();
-#define RemoveBook
+
 
 void AddBook();
-#define AddBook
