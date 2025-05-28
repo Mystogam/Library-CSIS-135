@@ -16,3 +16,11 @@ struct Book
     int copiesAvailable;
     int copiesCheckedOut;
 };
+
+void DisplayBook();
+
+void BorrowBook();
+
+void RemoveBook();
+
+void AddBook();
