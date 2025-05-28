@@ -33,7 +33,6 @@ long long LibraryMenu()
             {
                 throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
 
-                inputrecieved = true;
             }
         }
         catch(const exception& e)
