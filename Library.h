@@ -5,6 +5,9 @@
 #include <string>
 using namespace std;
 
+
+long long LibraryMenu();
+
 struct Book
 {
     std::string book;
