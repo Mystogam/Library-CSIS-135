@@ -9,6 +9,7 @@ using namespace std;
 long long LibraryMenu()
 {
     int selection;
+    bool inputrecieved = false;
 
     cout << "Welcome to the GCC computer science library!!\n Below you will find a menu that will ask you to decide what to do next.\n" << endl;
 
@@ -20,6 +21,20 @@ long long LibraryMenu()
 
     cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;
     cin >> selection;
+    
+    while(!inputrecieved)
+    {
+        try
+        {
+            /* code */
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+        
+
+    }
 
     return 0;
 }
