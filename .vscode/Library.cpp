@@ -13,7 +13,7 @@ long long LibraryMenu()
     
     while(!inputrecieved)
     {
-        
+
         try
         {
              cout << "Welcome to the GCC computer science library!!\n Below you will find a menu that will ask you to decide what to do next.\n" << endl;
@@ -27,16 +27,19 @@ long long LibraryMenu()
              cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;
             
              std::cin >> selection;
-
+            
 
             if(std::cin.fail())
-                throw std::invalid_argument("");//Like in the factorial calculator previously created it throws an exception
+            {
+                throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
 
                 inputrecieved = true;
+            }
         }
-        catch(const std::exception& e)
+        catch(const exception& e)
         {
-            std::cerr << e.what() << '\n';
+            cout << "An error has occured." << endl;
+            std::cin.clear();
         }
         
 
