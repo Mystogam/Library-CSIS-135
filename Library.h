@@ -7,5 +7,9 @@ using namespace std;
 
 struct Book
 {
-
+    std::string book;
+    std::string author;
+    int publicationYear;
+    int copiesAvailable;
+    int copiesCheckedOut;
 };
