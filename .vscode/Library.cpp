@@ -68,17 +68,17 @@ long long LibraryMenu()
 }
 
 
-void AddBook()
+void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)
 {
     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
 }
 
-void RemoveBook()
+void RemoveBook(std::string title)
 {
     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
 }
 
-void BorrowBook()
+void BorrowBook(std::string title)
 {
     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
 }
