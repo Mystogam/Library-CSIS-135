@@ -68,12 +68,12 @@ long long LibraryMenu()
 
 void AddBook()
 {
-
+    cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
 }
 
 void RemoveBook()
 {
-
+    cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
 }
 
 void BorrowBook()
