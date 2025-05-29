@@ -78,10 +78,11 @@ void RemoveBook()
 
 void BorrowBook()
 {
-
+    cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
 }
 
 void DisplayBook()
 {
-
+    cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
+    
 }
