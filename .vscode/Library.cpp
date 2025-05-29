@@ -37,20 +37,22 @@ long long LibraryMenu()
             if(selection == 1)
             {
                 DisplayBook();
+                inputrecieved = true;
             }
             else if(selection == 2)
             {
-
+                inputrecieved = true;
                
             }
             else if(selection == 3)
             {
-      
                 
+                inputrecieved = true;
             }
             else if (selection == 4)
             {
                 
+                inputrecieved = true;
             }
         }
         catch(const exception& e)
