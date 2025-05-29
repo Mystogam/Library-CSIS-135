@@ -41,16 +41,16 @@ long long LibraryMenu()
             else if(selection = 2)
             {
 
-                BorrowBook();
+               
             }
             else if(selection = 3)
             {
       
-                AddBook();
+                
             }
             else if (selection = 4)
             {
-                RemoveBook();
+                
             }
         }
         catch(const exception& e)
@@ -84,5 +84,5 @@ void BorrowBook()
 void DisplayBook()
 {
     cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
-    
+
 }
