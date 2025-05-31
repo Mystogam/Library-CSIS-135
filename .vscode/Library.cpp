@@ -6,8 +6,6 @@
 #include "Library.h"
 using namespace std;
 
-
-
 long long LibraryMenu()
 {
     int selection;
@@ -73,17 +71,23 @@ long long LibraryMenu()
 void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)
 {
     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
+    cout << "Please enter the name or title of the book you would like to add to the library: " << endl;
+    cout << "Please enter the name of the author of the book that is being added to the library: " << endl;
+    cout << "Please enter the year in which the book being added was published: " << endl;
+    cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
     
 }
 
 void RemoveBook(std::string title)
 {
     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
+    cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
 }
 
 void BorrowBook(std::string title)
 {
     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
+    cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
 }
 void DisplayBook()
 {
