@@ -76,24 +76,28 @@ void AddBook(std::string title, std::string author, int publicationYear, int cop
         if(std::cin.fail())
         {
             cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
+            cin >> title;
         }
     cout << "Please enter the name of the author of the book that is being added to the library: " << endl;
     cin >> author;
         if(std::cin.fail())
         {
             cout << "Error has occured in input. Please try again by inputing the name of the author again please: " << endl;
+            cin >> author;
         }
     cout << "Please enter the year in which the book being added was published: " << endl;
     cin >> publicationYear;
             if(std::cin.fail())
         {
             cout << "Error has occured in input. Please try again by inputing the year that in which the book was published: " << endl;
+            cin >> publicationYear;
         }
     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
     cin >> copiesAvailable;
         if(std::cin.fail())
         {
             cout << "Error has occured in input. Please try again by inputing the amount of books you would like to add: " << endl;
+            cin >> copiesAvailable;
         }
 }
 
@@ -105,6 +109,7 @@ void RemoveBook(std::string title)
         if(std::cin.fail())
         {
             cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
+            cin >> title;
         }
 }
 
@@ -116,6 +121,7 @@ void BorrowBook(std::string title)
         if(std::cin.fail())
         {
             cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
+            cin >> title;
         }
 }
 void DisplayBook()
