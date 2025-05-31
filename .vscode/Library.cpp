@@ -27,32 +27,31 @@ long long LibraryMenu()
              cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;
             
              std::cin >> selection;
+                if(selection == 1)
+                {
+                    DisplayBook();
+                    inputrecieved = true;
+                }
+                else if(selection == 2)
+                {
+                inputrecieved = true;
+           
+                }
+                else if(selection == 3)
+                {
             
+                inputrecieved = true;
+                }
+                else if (selection == 4)
+                {
+                
+                inputrecieved = true;
+                }
 
             if(std::cin.fail())
             {
                 throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
 
-            }
-            if(selection == 1)
-            {
-                DisplayBook();
-                inputrecieved = true;
-            }
-            else if(selection == 2)
-            {
-                inputrecieved = true;
-               
-            }
-            else if(selection == 3)
-            {
-                
-                inputrecieved = true;
-            }
-            else if (selection == 4)
-            {
-                
-                inputrecieved = true;
             }
         }
         catch(const exception& e)
