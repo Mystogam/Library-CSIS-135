@@ -73,12 +73,28 @@ void AddBook(std::string title, std::string author, int publicationYear, int cop
     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
     cout << "Please enter the name or title of the book you would like to add to the library: " << endl;
     cin >> title;
+        if(std::cin.fail())
+        {
+            cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
+        }
     cout << "Please enter the name of the author of the book that is being added to the library: " << endl;
     cin >> author;
+        if(std::cin.fail())
+        {
+            cout << "Error has occured in input. Please try again by inputing the name of the author again please: " << endl;
+        }
     cout << "Please enter the year in which the book being added was published: " << endl;
     cin >> publicationYear;
+            if(std::cin.fail())
+        {
+            cout << "Error has occured in input. Please try again by inputing the year that in which the book was published: " << endl;
+        }
     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
     cin >> copiesAvailable;
+        if(std::cin.fail())
+        {
+            cout << "Error has occured in input. Please try again by inputing the amount of books you would like to add: " << endl;
+        }
 }
 
 void RemoveBook(std::string title)
@@ -86,6 +102,10 @@ void RemoveBook(std::string title)
     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
     cin >> title;
+        if(std::cin.fail())
+        {
+            cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
+        }
 }
 
 void BorrowBook(std::string title)
@@ -93,6 +113,10 @@ void BorrowBook(std::string title)
     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
     cin >> title;
+        if(std::cin.fail())
+        {
+            cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
+        }
 }
 void DisplayBook()
 {
