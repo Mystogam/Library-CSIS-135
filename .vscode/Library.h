@@ -5,8 +5,7 @@
 #include <string>
 using namespace std;
 
-#ifndef LIBRARY_H
-#define LIBRARY_H
+
 
 class Library
 {
@@ -47,8 +46,7 @@ struct Book
     int copiesCheckedOut;
 };
 
-long long LibraryMenu();
 
-#endif
+
 
 //My code is returning errors  that WinMain is undefined and I can't test my code to see what I can improve upon. I am also aware I am sorely lacking in terms of arrays, struct and classes defining values or just having the proper formating. I will continue to review the material and update it as I go.

@@ -6,8 +6,10 @@
 #include "Library.h"
 using namespace std;
 
-long long LibraryMenu()
+
+int main()
 {
+    Library myLibrary;
     int selection;
     bool inputrecieved = false;
     
@@ -30,21 +32,24 @@ long long LibraryMenu()
                 if(selection == 1)
                 {
                     inputrecieved = true;
+                    return 0;
                 }
                 else if(selection == 2)
                 {
-                inputrecieved = true;
-           
+                    inputrecieved = true;
+                    return 0;
                 }
                 else if(selection == 3)
                 {
             
-                inputrecieved = true;
+                    inputrecieved = true;
+                    return 0;
                 }
                 else if (selection == 4)
                 {
                 
-                inputrecieved = true;
+                    inputrecieved = true;
+                    return 0;
                 }
             if(std::cin.fail())
             {
