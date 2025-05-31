@@ -29,7 +29,6 @@ long long LibraryMenu()
              std::cin >> selection;
                 if(selection == 1)
                 {
-                    DisplayBook();
                     inputrecieved = true;
                 }
                 else if(selection == 2)
@@ -66,7 +65,7 @@ long long LibraryMenu()
 }
 
 
-void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)
+void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)
 {
     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
     cout << "Please enter the name or title of the book you would like to add to the library: " << endl;
@@ -101,7 +100,7 @@ void AddBook(std::string title, std::string author, int publicationYear, int cop
     return AddBook(title,author,publicationYear,copiesAvailable);
 }
 
-void RemoveBook(std::string title)
+void Library::RemoveBook(std::string title)
 {
     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
@@ -114,7 +113,7 @@ void RemoveBook(std::string title)
     return RemoveBook(title);
 }
 
-void BorrowBook(std::string title)
+void Library::BorrowBook(std::string title)
 {
     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
@@ -126,7 +125,7 @@ void BorrowBook(std::string title)
         }
     return BorrowBook(title);
 }
-void DisplayBook()
+void Library::DisplayBook()
 {
     cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
 

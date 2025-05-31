@@ -14,7 +14,10 @@ private:
     
 public:
     Library();
-    
+void DisplayBook();
+void BorrowBook(std::string title);
+void RemoveBook(std::string title);
+void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable);
     ~Library();
 };
 
@@ -36,9 +39,5 @@ struct Book
 };
 
 long long LibraryMenu();
-void DisplayBook();
-void BorrowBook(std::string title);
-void RemoveBook(std::string title);
-void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable);
 
 #endif
