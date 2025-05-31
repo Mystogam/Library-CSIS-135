@@ -28,7 +28,7 @@ Library::~Library()
 
 struct Book
 {
-    std::string book;
+    std::string title;
     std::string author;
     int publicationYear;
     int copiesAvailable;

@@ -47,7 +47,6 @@ long long LibraryMenu()
                 
                 inputrecieved = true;
                 }
-
             if(std::cin.fail())
             {
                 throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
