@@ -130,3 +130,5 @@ void Library::DisplayBook()
     cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
 
 }
+
+////My code is returning errors  that WinMain is undefined and I can't test my code to see what I can improve upon. I am aware I am not returning the values properly back into the structures, arrays or classes and that I need to finish doing it. Still trying to understand and review the material.
