@@ -31,29 +31,24 @@ int main()
                 if(selection == 1)
                 {
                     inputrecieved = true;
-                    return 0;
                 }
                 else if(selection == 2)
                 {
                     inputrecieved = true;
-                    return 0;
                 }
                 else if(selection == 3)
                 {
-            
                     inputrecieved = true;
-                    return 0;
                 }
                 else if (selection == 4)
                 {
-                
+                //loop until quit selected
                     inputrecieved = true;
-                    return 0;
                 }
             if(std::cin.fail())
             {
                 throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
-
+            
             }
         }
         catch(const exception& e)
@@ -71,6 +66,8 @@ int main()
 
 void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)
 {
+    //create new unique ptr of book with data from parameters
+    //add to book vector
     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
     cout << "Please enter the name or title of the book you would like to add to the library: " << endl;
     cin >> title;
@@ -101,11 +98,14 @@ void Library::AddBook(std::string title, std::string author, int publicationYear
             cin >> copiesAvailable;
         }
     
-    return AddBook(title,author,publicationYear,copiesAvailable);
+    //return AddBook(title,author,publicationYear,copiesAvailable);
 }
 
 void Library::RemoveBook(std::string title)
-{
+{ 
+    //a for loop that loops through the vector
+    //compares titles
+    //if the same, remove
     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
     cin >> title;
@@ -114,11 +114,14 @@ void Library::RemoveBook(std::string title)
             cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
             cin >> title;
         }
-    return RemoveBook(title);
+    //return RemoveBook(title);
 }
 
 void Library::BorrowBook(std::string title)
 {
+    //a for loop that loops through the vector
+    //compares titles
+    //if the same, check out a copy if available
     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
     cin >> title;
@@ -127,7 +130,7 @@ void Library::BorrowBook(std::string title)
             cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
             cin >> title;
         }
-    return BorrowBook(title);
+    //return BorrowBook(title);
 }
 void Library::DisplayBook()
 {
