@@ -18,14 +18,14 @@ int main()
     while(!inputrecieved) //while loop that initiates the user with a menu to select an input and decide what he would like to do with Library.
     {
 
-        try // A try catch statement inside this while statement
+        try // A try catch statement inside this while statement to prompt user and ensure that it will loop back around and re execute 
         {
-             cout << "Welcome to the GCC computer science library!!\n Below you will find a menu that will ask you to decide what to do next.\n" << endl;  
+             cout << "Welcome to the GCC computer science library!!\nBelow you will find a menu that will ask you to decide what to do next.\n" << endl;  
              cout << "If checking for book info in library please press 1 to go to book search menu and prompt.\n" << endl;
              cout << "If information is already known and you wish to borrow a book from the library please press 2 to go to the next menu and prompt.\n" << endl;
              cout << "If information is already known and you wish to add a book to the library please press 3 to go to the next menu and prompt.\n" << endl;
              cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;
-             std::cin >> selection;
+             cin >> selection;
              //Created 4 cout statements that each display a different message for the menu and have the user input their selection
              //When the user inputs their selection. If valid, will loop into this if else decision statement chain.
                 if(selection == 1)
