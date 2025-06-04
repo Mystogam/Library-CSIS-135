@@ -38,6 +38,9 @@ int main()
                 }
                 else if(selection == 2)
                 {
+                    cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
+                    cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
+                    cin >> title;
                     inputrecieved = true;
                 }
                 else if(selection == 3)
@@ -109,14 +112,7 @@ void Library::BorrowBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, check out a copy if available
-    cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
-    cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
-    cin >> title;
-        if(std::cin.fail())
-        {
-            cout << "Error has occured in input. Please try again by inputing the title or name of the book you wish to add: " << endl;
-            cin >> title;
-        }
+
     //return BorrowBook(title);
 }
 void Library::DisplayBook()
