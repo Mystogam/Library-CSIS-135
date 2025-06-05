@@ -24,10 +24,10 @@ private:
     //bookPtr->title
     //bookPtr->publicationYear
 public:
-    void DisplayBook(); //Declaring Display Book function. A function that displays the entire library of books with all their information. Like title, author, publication year and copies they have available.
-    void BorrowBook(std::string title);
-    void RemoveBook(std::string title);
-    void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable);
+    void DisplayBook(); //Declaring Display Book function. A function that displays the entire library of books with all their information. Like title, author, publication year and copies they have available. which displays the smart vector.
+    void BorrowBook(std::string title);//Declaring Borrow Book function that borrows a book from the library adjusting the copiesAvailable and copiesCheckedOut variables in vector.
+    void RemoveBook(std::string title);//Declaring the remove book function that removes a book from the function and loops it back to the vector
+    void AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable);//Declaring the addbook function that adds a book to the library and has the user introduce all the different values and strings for it.
     Library() {};
     ~Library() {};
 };
