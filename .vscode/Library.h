@@ -1,8 +1,10 @@
 //Christopher Alexan
 //CSIS 135
 
+#include <memory>
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 struct Book
@@ -18,6 +20,7 @@ class Library //Delcaring Library Class in header file to be implemented in cpp 
 {
 private:
     //define your private vector of uniqueptr<Book>
+    std::vector<std::unique_ptr<Book>> Books; //private vector defined for Books in library 
     //bookPtr->title
     //bookPtr->publicationYear
 public:
