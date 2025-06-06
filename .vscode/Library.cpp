@@ -62,6 +62,9 @@ int main()
                 else if (selection == 4)
                 {
                 //loop until quit selected
+                    cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
+                    cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
+                    cin >> title;
                     inputrecieved = true;
                 }
             if(std::cin.fail())
@@ -98,9 +101,7 @@ void Library::RemoveBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, remove
-    cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
-    cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
-    cin >> title;
+
     //return RemoveBook(title);
 }
 
