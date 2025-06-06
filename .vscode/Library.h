@@ -7,8 +7,9 @@
 #include <vector>
 using namespace std;
 
-struct Book
+struct Book //Book struct declaration in header file
 {
+    //Below is the declaration of the different variables for the book structure that the user will be used in the collection of info for the library's books.
     std::string title;
     std::string author;
     int publicationYear;
@@ -16,8 +17,9 @@ struct Book
     int copiesCheckedOut;
 
 
-    Book(std::string title, std::string author, int publicationYear, int copiesAvailable)
+    Book(std::string title, std::string author, int publicationYear, int copiesAvailable)//Book structures constructers declaration and adjustment.
     {
+        //allows for the user to add the book to the library
         this->title = title;
         this->author = author;
         this->publicationYear = publicationYear;
@@ -29,7 +31,6 @@ struct Book
 class Library //Delcaring Library Class in header file to be implemented in cpp file
 {
 private:
-    //define your private vector of uniqueptr<Book>
     std::vector<std::unique_ptr<Book>> _books; //private vector defined for Books in library 
     //bookPtr->title
     //bookPtr->publicationYear
@@ -41,5 +42,3 @@ public:
     Library() {};
     ~Library() {};
 };
-
-/*My code is returning errors  that WinMain is undefined and I can't test my code to see what I can improve upon. I am also aware I am sorely lacking in terms of arrays, struct and classes defining values or just having the proper formating. I will continue to review the material and update it as I go.*/
