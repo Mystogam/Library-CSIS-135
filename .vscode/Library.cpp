@@ -43,7 +43,7 @@ int main()
                     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
                     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
                     cin >> title;
-                    inputrecieved = true;
+                    
                 }
                 else if(selection == 3)
                 {
@@ -57,7 +57,7 @@ int main()
                     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
                     cin >> copiesAvailable;
                     myLibrary.AddBook(title, author, publicationYear, copiesAvailable);
-                    inputrecieved = true;
+                    
                 }
                 else if (selection == 4)
                 {
@@ -65,7 +65,7 @@ int main()
                     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
                     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
                     cin >> title;
-                    inputrecieved = true;
+                    
                 }
             if(std::cin.fail())
             {
