@@ -36,7 +36,7 @@ int main()
              
                 if(selection == 1)
                 {
-                    inputrecieved = true;
+                        cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
                 }
                 else if(selection == 2)
                 {
@@ -56,7 +56,7 @@ int main()
                     cin >> publicationYear;
                     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
                     cin >> copiesAvailable;
-                
+                    myLibrary.AddBook(title, author, publicationYear, copiesAvailable);
                     inputrecieved = true;
                 }
                 else if (selection == 4)
@@ -89,7 +89,7 @@ void Library::AddBook(std::string title, std::string author, int publicationYear
 {
     //create new unique ptr of book with data from parameters
     //add to book vector
-    
+    _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable));
     //return AddBook(title,author,publicationYear,copiesAvailable);
 }
 
@@ -114,7 +114,7 @@ void Library::BorrowBook(std::string title)
 }
 void Library::DisplayBook()
 {
-    cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
+
 
 }
 

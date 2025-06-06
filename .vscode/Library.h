@@ -14,13 +14,23 @@ struct Book
     int publicationYear;
     int copiesAvailable;
     int copiesCheckedOut;
+
+
+    Book(std::string title, std::string author, int publicationYear, int copiesAvailable)
+    {
+        this->title = title;
+        this->author = author;
+        this->publicationYear = publicationYear;
+        this->copiesAvailable = copiesAvailable;
+        copiesCheckedOut = 0;
+    }
 };
 
 class Library //Delcaring Library Class in header file to be implemented in cpp file
 {
 private:
     //define your private vector of uniqueptr<Book>
-    std::vector<std::unique_ptr<Book>> Books; //private vector defined for Books in library 
+    std::vector<std::unique_ptr<Book>> _books; //private vector defined for Books in library 
     //bookPtr->title
     //bookPtr->publicationYear
 public:
