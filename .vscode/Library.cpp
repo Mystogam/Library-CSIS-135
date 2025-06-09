@@ -36,7 +36,9 @@ int main()
              
                 if(selection == 1)
                 {
-                        cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
+                        cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
+
+
                 }
                 else if(selection == 2)
                 {
@@ -103,6 +105,7 @@ void Library::RemoveBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, remove
+    
 
 }
 
@@ -113,10 +116,20 @@ void Library::BorrowBook(std::string title)
     //if the same, check out a copy if available
 
 
+
 }
 void Library::DisplayBook()
 {
+    if(_books.empty())
+    {
+        cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time." << endl;
 
+    }
+    else
+    {
+        
+    }
 
 }
 
+ 
