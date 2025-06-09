@@ -95,7 +95,7 @@ void Library::AddBook(std::string title, std::string author, int publicationYear
     //create new unique ptr of book with data from parameters
     //add to book vector
     _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable));
-    //return AddBook(title,author,publicationYear,copiesAvailable);
+
 }
 
 void Library::RemoveBook(std::string title)
@@ -104,7 +104,6 @@ void Library::RemoveBook(std::string title)
     //compares titles
     //if the same, remove
 
-    //return RemoveBook(title);
 }
 
 void Library::BorrowBook(std::string title)
@@ -113,7 +112,7 @@ void Library::BorrowBook(std::string title)
     //compares titles
     //if the same, check out a copy if available
 
-    //return BorrowBook(title);
+
 }
 void Library::DisplayBook()
 {
@@ -121,4 +120,3 @@ void Library::DisplayBook()
 
 }
 
-////My code is returning errors  that WinMain is undefined and I can't test my code to see what I can improve upon. I am aware I am not returning the values properly back into the structures, arrays or classes and that I need to finish doing it. Still trying to understand and review the material.
