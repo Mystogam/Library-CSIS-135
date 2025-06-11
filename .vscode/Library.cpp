@@ -120,7 +120,7 @@ void Library::BorrowBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, check out a copy if available
-    for()//for loop that checks the vector for the title of book
+    for(std::vector<std::unique_ptr<Book>>::iterator i = _books.begin(); i != _books.end(); ++i)//for loop that checks the vector for the title of book
     {
         if(title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
