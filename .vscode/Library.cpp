@@ -105,9 +105,9 @@ void Library::RemoveBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, remove
-    for()
+    for()//for loop that checks vector
     {
-        if()
+        if()//if loop that will destroy book and attatched values from library.
         {
 
         }
@@ -120,9 +120,9 @@ void Library::BorrowBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, check out a copy if available
-    for()
+    for()//for loop that checks the vector for the title of book
     {
-        if(title == title)
+        if(title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
 
         }
