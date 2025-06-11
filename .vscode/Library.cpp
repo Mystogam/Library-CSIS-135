@@ -120,11 +120,13 @@ void Library::BorrowBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, check out a copy if available
-    if(title == title)
+    for()
     {
+        if(title == title)
+        {
 
+        }
     }
-
 
 }
 void Library::DisplayBook()//function meant to display entire library that is stored inside the vector.
