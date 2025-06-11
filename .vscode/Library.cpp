@@ -37,7 +37,7 @@ int main()
                 if(selection == 1)
                 {
                         cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
-
+                        
 
                 }
                 else if(selection == 2)
@@ -105,7 +105,7 @@ void Library::RemoveBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, remove
-    for()//for loop that checks vector
+    for(std::vector<std::unique_ptr<Book>>::iterator i = _books.begin(); i != _books.end(); ++i)//for loop that checks vector
     {
         if()//if loop that will destroy book and attatched values from library.
         {
