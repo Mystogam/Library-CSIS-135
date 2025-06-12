@@ -37,6 +37,8 @@ int main()
                 if(selection == 1)
                 {
                         cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
+
+                        myLibrary.DisplayBook();
                         
 
                 }
