@@ -107,9 +107,9 @@ void Library::RemoveBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, remove
-    for(std::vector<std::unique_ptr<Book>>::iterator i = _books.begin(); i != _books.end(); ++i)//for loop that checks vector
+    for(auto& Book : _books)//for loop that checks vector, really hoping this works.
     {
-        if()//if loop that will destroy book and attatched values from library.
+        if(_books->title == title)//if loop that will destroy book and attatched values from library.
         {
 
         }
@@ -122,7 +122,7 @@ void Library::BorrowBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, check out a copy if available
-    for(std::vector<std::unique_ptr<Book>>::iterator i = _books.begin(); i != _books.end(); ++i)//for loop that checks the vector for the title of book
+    for(auto& Book : _books)//for loop that checks the vector for the title of book
     {
         if(title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
