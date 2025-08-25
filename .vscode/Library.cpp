@@ -147,12 +147,17 @@ void Library::DisplayBook()//function meant to display entire library that is st
     else
     {
         cout << "Below are the selection of all the books currently available in our library." << endl;
-        
+
         for(const auto& Book:_books)
         {
         cout << &_books << endl;
-        
-    
+        cout << "Title: " << endl;
+        cout << "Author: " << endl;
+        cout << "Publication Year" << endl;
+        cout << "Current Available Copies: " << endl;
+        cout << "Current amount of copies checked out: " << endl;
+        cout << "\n" << endl;
+
         
         }
     
