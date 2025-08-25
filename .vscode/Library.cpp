@@ -111,7 +111,11 @@ void Library::RemoveBook(std::string title)
     {
         if(Book->title == title)//if loop that will destroy book and attatched values from library.
         {
-            
+            Book->copiesAvailable;
+            Book->author;
+            Book->copiesCheckedOut;
+            Book->publicationYear;
+            Book->title;
         }
     }
 
@@ -126,7 +130,9 @@ void Library::BorrowBook(std::string title)
     {
         if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
-
+            Book->title;
+            Book->copiesAvailable;
+            Book->copiesCheckedOut;
         }
     }
 
@@ -135,7 +141,7 @@ void Library::DisplayBook()//function meant to display entire library that is st
 {
     if(_books.empty())
     {
-        cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time." << endl;
+        cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time." << endl;//display message for empty library error
     
     }
     else
