@@ -148,9 +148,9 @@ void Library::DisplayBook()//function meant to display entire library that is st
     {
         cout << "Below are the selection of all the books currently available in our library." << endl;
 
-        for(const auto& Book:_books)
+        for(const auto& Book:_books) //For loop that 
         {
-        cout << &_books << endl;
+        
         cout << "Title: " << endl;
         cout << "Author: " << endl;
         cout << "Publication Year" << endl;
