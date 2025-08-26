@@ -148,14 +148,14 @@ void Library::DisplayBook()//function meant to display entire library that is st
     {
         cout << "Below are the selection of all the books currently available in our library." << endl;
 
-        for(const auto& Book:_books) //For loop that 
+        for(const auto& Book:_books) //For loop that constantly refreshes through the vector to properly display all the different Books in the library vector and the values associated with each corresponding Book
         {
         
-        cout << "Title: " << endl;
-        cout << "Author: " << endl;
-        cout << "Publication Year" << endl;
-        cout << "Current Available Copies: " << endl;
-        cout << "Current amount of copies checked out: " << endl;
+        cout << "Title: " << Book->title << endl; 
+        cout << "Author: " << Book->author << endl;
+        cout << "Publication Year" << Book->publicationYear << endl;
+        cout << "Current Available Copies: " << Book->copiesAvailable << endl;
+        cout << "Current amount of copies checked out: " << Book->copiesCheckedOut << endl;
         cout << "\n" << endl;
 
         
