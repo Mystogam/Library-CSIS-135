@@ -111,7 +111,11 @@ void Library::RemoveBook(std::string title)
     {
         if(Book->title == title)//if loop that will destroy book and attatched values from library.
         {
- 
+            cout << "Book " << title << " has been succesfully removed from Library." << endl;
+        }
+        else
+        {
+
         }
     }
 
@@ -126,7 +130,16 @@ void Library::BorrowBook(std::string title)
     {
         if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
-            cout << "The requested book to check out:" << title << endl;
+            if(Book->copiesAvailable > 0)
+            {
+            Book->copiesAvailable--;
+            Book->copiesCheckedOut++;
+            cout << "The requested book to check out: " << Book->title << endl;
+            }
+            else
+            {
+                
+            }
 
         }
     }
