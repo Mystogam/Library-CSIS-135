@@ -111,11 +111,7 @@ void Library::RemoveBook(std::string title)
     {
         if(Book->title == title)//if loop that will destroy book and attatched values from library.
         {
-            Book->copiesAvailable;
-            Book->author;
-            Book->copiesCheckedOut;
-            Book->publicationYear;
-            Book->title;
+ 
         }
     }
 
@@ -130,9 +126,8 @@ void Library::BorrowBook(std::string title)
     {
         if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
-            Book->title;
-            Book->copiesAvailable;
-            Book->copiesCheckedOut;
+            cout << "The requested book to check out:" << title << endl;
+
         }
     }
 
@@ -151,7 +146,8 @@ void Library::DisplayBook()//function meant to display entire library that is st
         for(const auto& Book:_books) //For loop that constantly refreshes through the vector to properly display all the different Books in the library vector and the values associated with each corresponding Book
         {
         
-        cout << "Title: " << Book->title << endl; 
+        //Beneath are the for loop display statements that cycle through the different values attatched to each books in the vector everytime the for loop cycles ot a different book.
+        cout << "Title: " << Book->title << endl;
         cout << "Author: " << Book->author << endl;
         cout << "Publication Year" << Book->publicationYear << endl;
         cout << "Current Available Copies: " << Book->copiesAvailable << endl;
