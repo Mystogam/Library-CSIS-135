@@ -130,15 +130,15 @@ void Library::BorrowBook(std::string title)
     {
         if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
-            if(Book->copiesAvailable > 0)
+            if(Book->copiesAvailable > 0)//runs a check for copies available then loops to else statement in case of failure
             {
-            Book->copiesAvailable--;
-            Book->copiesCheckedOut++;
-            cout << "The requested book to check out: " << Book->title << endl;
+            Book->copiesAvailable--; //subtracts a value of 1 from copiesAvailable variable attatched to the specific book being called
+            Book->copiesCheckedOut++; //adds a value of 1 to the copiesCheckedOut variable attatched to the specific book being called
+            cout << "The requested book to check out: " << Book->title << " has been succesfully checked out." << endl;
             }
             else
             {
-                
+                cout << "There are currently no available copies of " << Book->title << " to check out at the moment." << endl;
             }
 
         }
