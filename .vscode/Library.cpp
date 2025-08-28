@@ -94,35 +94,28 @@ int main()
 }
 
 
-void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)
+void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)//void function for the addition of more books to library vector
 {
-    //create new unique ptr of book with data from parameters
-    //add to book vector
-    _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable));
+    _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable)); //sends the inputted variables for the new book back into the vector
 
 }
 
-void Library::RemoveBook(std::string title)
+void Library::RemoveBook(std::string title) //function for  removing a book variable from 
 { 
-    //a for loop that loops through the vector
-    //compares titles
-    //if the same, remove
+
     for(auto it = _books.begin(); it != _books.end(); ++it)//for loop that checks vector, really hoping this works.
     {
         if((*it)->title == title)//if loop that will destroy book and attatched values from library.
         {
             cout << "Book " << title << " has been succesfully removed from Library." << endl;
-            _books.erase(it);
+            _books.erase(it);//erases the book and all values attatched to book from vector
         }
     }
 
 }
 
-void Library::BorrowBook(std::string title)
+void Library::BorrowBook(std::string title)//void function made for the borrowing of books from library
 {
-    //a for loop that loops through the vector
-    //compares titles
-    //if the same, check out a copy if available
     for(auto& Book : _books)//for loop that checks the vector for the title of book
     {
         if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
