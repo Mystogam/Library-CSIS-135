@@ -107,11 +107,12 @@ void Library::RemoveBook(std::string title)
     //a for loop that loops through the vector
     //compares titles
     //if the same, remove
-    for(auto& Book : _books)//for loop that checks vector, really hoping this works.
+    for(auto it = _books.begin(); it != _books.end(); ++it)//for loop that checks vector, really hoping this works.
     {
-        if(Book->title == title)//if loop that will destroy book and attatched values from library.
+        if((*it)->title == title)//if loop that will destroy book and attatched values from library.
         {
             cout << "Book " << title << " has been succesfully removed from Library." << endl;
+            _books.erase(it);
         }
     }
 
@@ -132,7 +133,7 @@ void Library::BorrowBook(std::string title)
             Book->copiesCheckedOut++; //adds a value of 1 to the copiesCheckedOut variable attatched to the specific book being called
             cout << "The requested book to check out: " << Book->title << " has been succesfully checked out." << endl;
             return;
-            
+
             }
             else //only runs if there are no titles currently available to be checked out
             {
