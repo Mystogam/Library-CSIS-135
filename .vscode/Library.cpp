@@ -113,10 +113,6 @@ void Library::RemoveBook(std::string title)
         {
             cout << "Book " << title << " has been succesfully removed from Library." << endl;
         }
-        else
-        {
-
-        }
     }
 
 }
@@ -135,8 +131,10 @@ void Library::BorrowBook(std::string title)
             Book->copiesAvailable--; //subtracts a value of 1 from copiesAvailable variable attatched to the specific book being called
             Book->copiesCheckedOut++; //adds a value of 1 to the copiesCheckedOut variable attatched to the specific book being called
             cout << "The requested book to check out: " << Book->title << " has been succesfully checked out." << endl;
+            return;
+            
             }
-            else
+            else //only runs if there are no titles currently available to be checked out
             {
                 cout << "There are currently no available copies of " << Book->title << " to check out at the moment." << endl;
             }
