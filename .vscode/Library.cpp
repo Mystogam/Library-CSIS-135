@@ -36,7 +36,7 @@ int main()
              
                 if(selection == 1)
                 {
-                        cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
+                        cout << "Thank you for inputting the first selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
 
                         myLibrary.DisplayBook();
                         return 0;
@@ -141,7 +141,7 @@ void Library::DisplayBook()//function meant to display entire library that is st
 {
     if(_books.empty())
     {
-        cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time." << endl;//display message for empty library error
+        cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time.\n" << endl;//display message for empty library error
         return;
     }
     else
