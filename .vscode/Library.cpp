@@ -39,7 +39,7 @@ int main()
                         cout << "Thank you for inputting the second selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
 
                         myLibrary.DisplayBook();
-                        
+                        return;
 
                 }
                 else if(selection == 2)
@@ -154,7 +154,7 @@ void Library::DisplayBook()//function meant to display entire library that is st
         //Beneath are the for loop display statements that cycle through the different values attatched to each books in the vector everytime the for loop cycles ot a different book.
         cout << "Title: " << Book->title << endl;
         cout << "Author: " << Book->author << endl;
-        cout << "Publication Year" << Book->publicationYear << endl;
+        cout << "Publication Year: " << Book->publicationYear << endl;
         cout << "Current Available Copies: " << Book->copiesAvailable << endl;
         cout << "Current amount of copies checked out: " << Book->copiesCheckedOut << endl;
         cout << "\n" << endl;
