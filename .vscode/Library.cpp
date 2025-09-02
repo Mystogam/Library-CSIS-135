@@ -48,7 +48,7 @@ int main()
                     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
                     cin >> title; //stores title input prompted in the cout statements above for borrow book function.
                     myLibrary.BorrowBook(title); //Loops the values inputed above in else if decision statement into the borrow book void function.
-                    
+                    return 0;
                 }
                 else if(selection == 3)//The add book else if selection that loops back into the Addbook function
                 {
@@ -62,7 +62,7 @@ int main()
                     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
                     cin >> copiesAvailable;//stores the int value copies available into value prompted from cout statements from above.
                     myLibrary.AddBook(title, author, publicationYear, copiesAvailable); //Loops the the values inputed above in decision statement back into addbook void function.
-                    
+                    return 0;
                 }
                 else if (selection == 4)//The remove book section of the else if decision statement that loops back into the remove book void function.
                 {
@@ -71,11 +71,11 @@ int main()
                     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
                     cin >> title;
                     myLibrary.RemoveBook(title); //Loops the inputed title string back into the Remove book void function.
-                    
+                    return 0;
                 }
             if(std::cin.fail())
             {
-                throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Like in the factorial calculator previously created it throws an exception
+                throw std::invalid_argument("Incorrect input has occured. Please read menu selection again and ensure a proper input.");//Throws away any exceptions
                 
             }
         }
@@ -148,10 +148,8 @@ void Library::DisplayBook()//function meant to display entire library that is st
     {
         cout << "Below are the selection of all the books currently available in our library." << endl;
 
-        for(const auto& Book:_books) //For loop that constantly refreshes through the vector to properly display all the different Books in the library vector and the values associated with each corresponding Book
+        for(const auto& Book:_books)// For loop that iterates through the library vector and displays each book's details.
         {
-        
-        //Beneath are the for loop display statements that cycle through the different values attatched to each books in the vector everytime the for loop cycles ot a different book.
         cout << "Title: " << Book->title << endl;
         cout << "Author: " << Book->author << endl;
         cout << "Publication Year: " << Book->publicationYear << endl;
