@@ -142,7 +142,7 @@ void Library::DisplayBook()//function meant to display entire library that is st
     if(_books.empty())
     {
         cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time." << endl;//display message for empty library error
-    
+        return;
     }
     else
     {
@@ -158,10 +158,8 @@ void Library::DisplayBook()//function meant to display entire library that is st
         cout << "Current Available Copies: " << Book->copiesAvailable << endl;
         cout << "Current amount of copies checked out: " << Book->copiesCheckedOut << endl;
         cout << "\n" << endl;
-
-        
         }
-    
+        return;
     }
 
 }
