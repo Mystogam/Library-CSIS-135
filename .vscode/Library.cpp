@@ -18,31 +18,27 @@ int main()
     string author;
     bool inputrecieved = false;
     
-    while(!inputrecieved) //while loop that initiates the user with a menu to select an input and decide what he would like to do with Library.
+    while(!inputrecieved) //while loop that initiates the user with a menu to select and input a selection and will keep looping until the valid selection has been made.
     {
 
         try // A try catch statement inside this while statement to prompt user and ensure that it will loop back around and re execute 
         {
-             cout << "Welcome to the GCC computer science library!!\n" << endl; //Cout statement that welcomes the user to library.
+            //Welcome message with menu options below that store input selection
+             cout << "Welcome to the GCC computer science library!!\n" << endl;
              cout << "Below you will find a menu that will ask you to decide what to do next.\n" << endl;
-             cout << "If checking for book info in library please press 1 to go to book search menu and prompt.\n" << endl;//cout statement that tells user to input the number 1 for the loop to display info on books
-             cout << "If information is already known and you wish to borrow a book from the library please press 2 to go to the next menu and prompt.\n" << endl; //cout statement that tells user to input the number 2 to borrow book section of the library
-             cout << "If information is already known and you wish to add a book to the library please press 3 to go to the next menu and prompt.\n" << endl; //cout statement that tells user to input the number 3 for the add book section of the library.
-             cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;//cout statement that tells the user to input the number 4 for the remove book section of the library.
-             std::cin >> selection;//stores number input
+             cout << "If checking for book info in library please press 1 to go to book search menu and prompt.\n" << endl;
+             cout << "If information is already known and you wish to borrow a book from the library please press 2 to go to the next menu and prompt.\n" << endl;
+             cout << "If information is already known and you wish to add a book to the library please press 3 to go to the next menu and prompt.\n" << endl;
+             cout << "If information is already known and you wish to remove the book from the library please press 4 to go to the next menu and prompt.\n" << endl;
+             std::cin >> selection;
              
-             //Created 4 cout statements that each display a different message for the menu and have the user input their selection
-             //When the user inputs their selection. If valid, will loop into this if else decision statement chain.
-             
-                if(selection == 1)
+                if(selection == 1)//calls for display book void function
                 {
-                        cout << "Thank you for inputting the first selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;//cout statement that displays user with the input of choosing display.
-
+                        cout << "Thank you for inputting the first selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
                         myLibrary.DisplayBook();
                         return 0;
-
                 }
-                else if(selection == 2)
+                else if(selection == 2)//calls for borrow book void function
                 {
                     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
                     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
@@ -66,7 +62,7 @@ int main()
                 }
                 else if (selection == 4)//The remove book section of the else if decision statement that loops back into the remove book void function.
                 {
-                //loop until quit selected
+                    //loop until quit selected
                     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
                     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
                     cin >> title;
