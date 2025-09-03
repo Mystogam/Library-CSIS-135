@@ -1,5 +1,4 @@
 //Christopher Alexan
-//CSIS 135
 
 #include <iostream>
 #include <string>
@@ -36,7 +35,7 @@ int main()
                 {
                         cout << "Thank you for inputting the first selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
                         myLibrary.DisplayBook();
-                        return 0;//exits code after enter the display book function is finished running
+                        return 0;//exits code after display book function
                 }
                 else if(selection == 2)//calls for borrow book void function
                 {
@@ -45,9 +44,9 @@ int main()
                     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
                     cin >> title;
                     myLibrary.BorrowBook(title);//pushes the title value inputted into void function
-                    return 0;//exits code after enter the book into Borrow book function
+                    return 0;//exits code after the Borrow book function
                 }
-                else if(selection == 3)//loops to Addbook function
+                else if(selection == 3)//the Addbook function section of the if else statement
                 {
                     //requests user to input book specifics below
                     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
@@ -60,15 +59,15 @@ int main()
                     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
                     cin >> copiesAvailable;
                     myLibrary.AddBook(title, author, publicationYear, copiesAvailable); //adds the the values inputed above in decision statement back into addbook void function.
-                    return 0;//exits code after enter the book into addbook function
+                    return 0;//exits code after addbook function
                 }
-                else if (selection == 4)//The remove book section of the else if decision statement that loops back into the remove book void function.
+                else if (selection == 4)//The remove book section of the else if decision statement
                 {
                     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
                     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
                     cin >> title;
                     myLibrary.RemoveBook(title); //Loops the inputed title string back into the Remove book void function.
-                    return 0;//exits code after enter the book into Remove book function
+                    return 0;//exits code after Remove book function
                 }
             if(std::cin.fail())
             {
@@ -93,7 +92,7 @@ int main()
 
 void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)//void function for the addition of more books to unique pointer _books
 {
-    _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable)); //sends the inputted variables for the new book back into the vector
+    _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable)); //sends the inputted variables for the new book back into the unique pointer
 
 }
 
@@ -108,14 +107,15 @@ void Library::RemoveBook(std::string title) //function for  removing a book vari
             _books.erase(it);//erases the book and all values attatched to book from vector
         }
     }
+    return;//prevents unnessecary checks
 
 }
 
 void Library::BorrowBook(std::string title)//void function made for the borrowing of books from library
 {
-    for(auto& Book : _books)//for loop that checks the vector for the title of book
+    for(auto& Book : _books)//for loop that checks every title in the pointer
     {
-        if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
+        if(Book->title == title)//if statement that checks for the title in pointer
         {
             if(Book->copiesAvailable > 0)//runs a check for copies available
             {
@@ -131,9 +131,10 @@ void Library::BorrowBook(std::string title)//void function made for the borrowin
 
         }
     }
+    return;//prevents unnessecary checks
 
 }
-void Library::DisplayBook()//function meant to display entire library that is stored inside the vector.
+void Library::DisplayBook()//function meant to display entire library that is stored inside the unique pointer
 {
     if(_books.empty())
     {
@@ -155,5 +156,3 @@ void Library::DisplayBook()//function meant to display entire library that is st
     }
 
 }
-
- 
