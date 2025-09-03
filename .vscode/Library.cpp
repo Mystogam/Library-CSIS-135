@@ -36,38 +36,39 @@ int main()
                 {
                         cout << "Thank you for inputting the first selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
                         myLibrary.DisplayBook();
-                        return 0;
+                        return 0;//exits code after enter the book into display book function
                 }
                 else if(selection == 2)//calls for borrow book void function
                 {
                     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
                     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
-                    cin >> title; //stores title input prompted in the cout statements above for borrow book function.
+                    cin >> title;
                     myLibrary.BorrowBook(title); //Loops the values inputed above in else if decision statement into the borrow book void function.
                     return 0;
                 }
-                else if(selection == 3)//The add book else if selection that loops back into the Addbook function
+                else if(selection == 3)//loops to Addbook function
                 {
+                    //requests user to input book specifics below
                     cout << "Thank you for inputting the third selection and enter the add book to archive section of the library.\n" << endl;
                     cout << "Please enter the name or title of the book you would like to add to the library: " << endl;
-                    cin >> title;//stores the string title input from cout statements above in value.
+                    cin >> title;
                     cout << "Please enter the name of the author of the book that is being added to the library: " << endl;
-                    cin >> author;//stores the string author input from cout statements above in value.
+                    cin >> author;
                     cout << "Please enter the year in which the book being added was published: " << endl;
-                    cin >> publicationYear;//stores the int value publication year into value prompted from cout statements from above.
+                    cin >> publicationYear;
                     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
-                    cin >> copiesAvailable;//stores the int value copies available into value prompted from cout statements from above.
-                    myLibrary.AddBook(title, author, publicationYear, copiesAvailable); //Loops the the values inputed above in decision statement back into addbook void function.
-                    return 0;
+                    cin >> copiesAvailable;
+                    myLibrary.AddBook(title, author, publicationYear, copiesAvailable); //adds the the values inputed above in decision statement back into addbook void function.
+                    
+                    return 0;//exits code after enter the book into addbook function
                 }
                 else if (selection == 4)//The remove book section of the else if decision statement that loops back into the remove book void function.
                 {
-                    //loop until quit selected
                     cout << "Thank you for inputting the fourth selection and entering the remove book section of this library.\n" << endl;
                     cout << "Please enter the name or title of book you would like to remove from the Library: " << endl;
                     cin >> title;
                     myLibrary.RemoveBook(title); //Loops the inputed title string back into the Remove book void function.
-                    return 0;
+                    return 0;//exits code after enter the book into Remove book function
                 }
             if(std::cin.fail())
             {
@@ -90,7 +91,7 @@ int main()
 }
 
 
-void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)//void function for the addition of more books to library vector
+void Library::AddBook(std::string title, std::string author, int publicationYear, int copiesAvailable)//void function for the addition of more books to unique pointer _books
 {
     _books.push_back(std::make_unique<Book>(title, author, publicationYear, copiesAvailable)); //sends the inputted variables for the new book back into the vector
 
@@ -121,7 +122,6 @@ void Library::BorrowBook(std::string title)//void function made for the borrowin
             Book->copiesAvailable--; //subtracts a value of 1 from copiesAvailable variable attatched to the specific book being called
             Book->copiesCheckedOut++; //adds a value of 1 to the copiesCheckedOut variable attatched to the specific book being called
             cout << "The requested book to check out: " << Book->title << " has been succesfully checked out." << endl;
-            return;
 
             }
             else //only runs if there are no titles currently available to be checked out
@@ -138,7 +138,6 @@ void Library::DisplayBook()//function meant to display entire library that is st
     if(_books.empty())
     {
         cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time.\n" << endl;//display message for empty library error
-        return;
     }
     else
     {
@@ -153,7 +152,6 @@ void Library::DisplayBook()//function meant to display entire library that is st
         cout << "Current amount of copies checked out: " << Book->copiesCheckedOut << endl;
         cout << "\n" << endl;
         }
-        return;
     }
 
 }
