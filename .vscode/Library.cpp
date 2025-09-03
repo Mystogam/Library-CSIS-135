@@ -105,9 +105,10 @@ void Library::RemoveBook(std::string title) //function for  removing a book vari
         {
             cout << "Book " << title << " has been succesfully removed from Library.\n" << endl;
             _books.erase(it);//erases the book and all values attatched to book from vector
+            return;//prevents unnessecary checks
         }
     }
-    return;//prevents unnessecary checks
+    
 
 }
 
@@ -139,6 +140,7 @@ void Library::DisplayBook()//function meant to display entire library that is st
     if(_books.empty())
     {
         cout << "Error has occured! It seems like the library that is to be displayed is currently empty, please return at another time.\n" << endl;//display message for empty library error
+        return;
     }
     else
     {
