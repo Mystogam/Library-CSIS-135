@@ -11,7 +11,7 @@ int main()
 {
     Library myLibrary;//Pulls the Library Class from the header file and allows for the .
 
-    int publicationYear; //variables declared for the book structure in
+    int publicationYear; //variables declared for the book structure in the header file
     int copiesAvailable;
     int selection;
     string title;
@@ -36,15 +36,16 @@ int main()
                 {
                         cout << "Thank you for inputting the first selection and entering the display section of this library archive, where you can see all the info about all books at our library.\n" << endl;
                         myLibrary.DisplayBook();
-                        return 0;//exits code after enter the book into display book function
+                        return 0;//exits code after enter the display book function is finished running
                 }
                 else if(selection == 2)//calls for borrow book void function
                 {
+                    //thanks user for choice and requests input of title
                     cout << "Thank you for inputting the second selection and entering the borrowing and free renting section of this library\n" << endl;
                     cout << "Please enter the name or title of the book that you would be borrowing from the Library: " << endl;
                     cin >> title;
-                    myLibrary.BorrowBook(title); //Loops the values inputed above in else if decision statement into the borrow book void function.
-                    return 0;
+                    myLibrary.BorrowBook(title);//pushes the title value inputted into void function
+                    return 0;//exits code after enter the book into Borrow book function
                 }
                 else if(selection == 3)//loops to Addbook function
                 {
@@ -59,7 +60,6 @@ int main()
                     cout << "Please also declare that amount of copies that you would be adding of said book to the Library: " << endl;
                     cin >> copiesAvailable;
                     myLibrary.AddBook(title, author, publicationYear, copiesAvailable); //adds the the values inputed above in decision statement back into addbook void function.
-                    
                     return 0;//exits code after enter the book into addbook function
                 }
                 else if (selection == 4)//The remove book section of the else if decision statement that loops back into the remove book void function.
@@ -104,7 +104,7 @@ void Library::RemoveBook(std::string title) //function for  removing a book vari
     {
         if((*it)->title == title)//if loop that will destroy book and attatched values from library.
         {
-            cout << "Book " << title << " has been succesfully removed from Library." << endl;
+            cout << "Book " << title << " has been succesfully removed from Library.\n" << endl;
             _books.erase(it);//erases the book and all values attatched to book from vector
         }
     }
@@ -117,16 +117,16 @@ void Library::BorrowBook(std::string title)//void function made for the borrowin
     {
         if(Book->title == title)//if loop that changes the variables copies available and copies checked out in vector.
         {
-            if(Book->copiesAvailable > 0)//runs a check for copies available then loops to else statement in case of failure
+            if(Book->copiesAvailable > 0)//runs a check for copies available
             {
-            Book->copiesAvailable--; //subtracts a value of 1 from copiesAvailable variable attatched to the specific book being called
-            Book->copiesCheckedOut++; //adds a value of 1 to the copiesCheckedOut variable attatched to the specific book being called
-            cout << "The requested book to check out: " << Book->title << " has been succesfully checked out." << endl;
+            Book->copiesAvailable--; //subtracts a value of 1 from copiesAvailable
+            Book->copiesCheckedOut++; //adds a value of 1 to the copiesCheckedOut 
+            cout << "The requested book to check out: " << Book->title << " has been succesfully checked out.\n" << endl;
 
             }
             else //only runs if there are no titles currently available to be checked out
             {
-                cout << "There are currently no available copies of " << Book->title << " to check out at the moment." << endl;
+                cout << "There are currently no available copies of " << Book->title << " to check out at the moment.\n" << endl;
             }
 
         }
@@ -141,7 +141,7 @@ void Library::DisplayBook()//function meant to display entire library that is st
     }
     else
     {
-        cout << "Below are the selection of all the books currently available in our library." << endl;
+        cout << "Below are the selection of all the books currently available in our library.\n" << endl;
 
         for(const auto& Book:_books)// For loop that iterates through the library vector and displays each book's details.
         {
